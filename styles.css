@@ -8,7 +8,7 @@ body {
   background-color: white;
 }
 
-main {
+.main {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 40px;
@@ -39,9 +39,6 @@ main {
   transition: all 0.3s ease 0s;
 }
 
-.card:hover {
-  transform: translateY(-7px);
-}
 
 .card__image-container {
   width: 100%;
@@ -59,7 +56,7 @@ main {
 }
 
 .card__content {
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .card__title {
@@ -75,8 +72,6 @@ main {
 .card__price {
   margin-left: auto;
   padding: 5px 20px;
-  background-color: #303032;
-  border-radius: 20px;
 }
 
 @media only screen and (max-width: 1000px) {
