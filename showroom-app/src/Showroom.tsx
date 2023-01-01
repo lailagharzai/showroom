@@ -1,25 +1,110 @@
 import React from "react";
+import { createAdd } from "typescript";
 import "./Showroom.css";
+
+let cars = [
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=904&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+  {
+    title: "2022 Porsche Panamera Turbo",
+    img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    price: "£1,399,950",
+    description:
+      "The prominent sculpting of the side profile creates the customary Porsche waistline.",
+    location: "London, UK",
+    distance: "256,980 miles",
+  },
+];
 
 function Showroom() {
   return (
     <div className="main">
       <div className="cards">
-        {[...Array(9)].map((x, i) => (
+        {cars.map((car, index) => (
           <div className="card">
-            <div className="card__image-container">
-              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80" />
+            <div className="card_image-container">
+              <img src={car.img} />
             </div>
-            <div className="card__content">
-              <p className="card__title text--medium">JKHJHJKHKHKJ</p>
-              <p className="card__price2 text--medium">£2000</p>
-              <p className="card__description text--medium">
-                This is a cool car
-              </p>
-              <div className="card__info">
-                <p className="text--medium">30 Min</p>
-                <p className="card__price text--medium">Free</p>
-              </div>
+            <div className="card_header">
+              <p className="card_title text">{car.title}</p>
+              <p className="card_price text">{car.price}</p>
+            </div>
+            <div className="card_info">
+              <p className="card_description text">{car.description}</p>
+            </div>
+            <div className="card_footer">
+              <p className="text">{car.location}</p>
+              <p className="card_distance text">{car.distance}</p>
             </div>
           </div>
         ))}
