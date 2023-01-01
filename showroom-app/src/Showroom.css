@@ -15,13 +15,28 @@ body {
   padding: 60px 0;
 }
 
-.text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+.text_medium {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
   line-height: 20px;
   font-weight: 400;
+}
+
+.text_small {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.text_primary {
   color: black;
 }
+
+.text_secondary {
+  color: #666666;
+}
+
 
 .cards {
   grid-column: 2 / span 12;
@@ -56,7 +71,7 @@ body {
 }
 
 .card_header {
-  padding-top: 20px;
+  padding-top: 24px;
 }
 
 .card_title {
@@ -65,9 +80,6 @@ body {
 
 .card_info {
   margin-top: 16px;
-  display: flex;
-  align-self: end;
-  align-items: center;
 }
 
 .card_footer {
@@ -75,6 +87,7 @@ body {
   display: flex;
   align-self: end;
   align-items: center;
+  width: 100%;
 }
 
 .card_distance {

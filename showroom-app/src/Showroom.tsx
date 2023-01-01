@@ -96,15 +96,15 @@ function Showroom() {
               <img src={car.img} />
             </div>
             <div className="card_header">
-              <p className="card_title text">{car.title}</p>
-              <p className="card_price text">{car.price}</p>
+              <p className="card_title text_medium text_primary">{car.title}</p>
+              <p className="card_price text_medium text_secondary">{car.price}</p>
             </div>
             <div className="card_info">
-              <p className="card_description text">{car.description}</p>
+              <p className="card_description text_small text_secondary">{car.description}</p>
             </div>
             <div className="card_footer">
-              <p className="text">{car.location}</p>
-              <p className="card_distance text">{car.distance}</p>
+              <p className="text_small text_secondary">{car.location}</p>
+              <p className="card_distance text_small text_secondary">{car.distance}</p>
             </div>
           </div>
         ))}
