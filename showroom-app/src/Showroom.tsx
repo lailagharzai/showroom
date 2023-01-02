@@ -1,5 +1,4 @@
 import React from "react";
-import { createAdd } from "typescript";
 import "./Showroom.css";
 
 let cars = [
@@ -89,6 +88,23 @@ let cars = [
 function Showroom() {
   return (
     <div className="main">
+      <div className="menu">
+        <div className="menu_navigation">
+        <img
+            className="menu_icon"
+            src={process.env.PUBLIC_URL + "/assets/menu_icon.svg"}
+          />
+          <img
+            className="menu_custodian_icon"
+            src={process.env.PUBLIC_URL + "/assets/custodian_icon.svg"}
+          />
+        </div>
+        <div className="menu_items text_menu">
+          <div className="menu_item">Garage</div>
+          <div className="menu_item">Showroom</div>
+          <div className="menu_item">Upcoming</div>
+        </div>
+      </div>
       <div className="cards">
         {cars.map((car, index) => (
           <div className="card">
@@ -96,15 +112,25 @@ function Showroom() {
               <img src={car.img} />
             </div>
             <div className="card_header">
-              <p className="card_title text_medium text_primary">{car.title}</p>
-              <p className="card_price text_medium text_secondary">{car.price}</p>
+              <p className="card_title text_medium text_primary">{car.title} </p>
+              <p className="card_price text_medium text_secondary">
+                {car.price}
+              </p>
             </div>
             <div className="card_info">
-              <p className="card_description text_small text_secondary">{car.description}</p>
+              <p className="card_description text_small text_secondary">
+                {car.description}
+              </p>
             </div>
             <div className="card_footer">
+              <img
+                className="card_location_icon"
+                src={process.env.PUBLIC_URL + "/assets/location_icon.svg"}
+              />
               <p className="text_small text_secondary">{car.location}</p>
-              <p className="card_distance text_small text_secondary">{car.distance}</p>
+              <p className="card_distance text_small text_secondary">
+                {car.distance}
+              </p>
             </div>
           </div>
         ))}
