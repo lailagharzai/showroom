@@ -90,19 +90,33 @@ function Showroom() {
     <div className="main">
       <div className="menu">
         <div className="menu_navigation">
-        <img
-            className="menu_icon"
-            src={process.env.PUBLIC_URL + "/assets/menu_icon.svg"}
-          />
-          <img
-            className="menu_custodian_icon"
-            src={process.env.PUBLIC_URL + "/assets/custodian_icon.svg"}
-          />
+          <div className="menu_icon">
+            <img src={process.env.PUBLIC_URL + "/assets/menu_icon.svg"} />
+          </div>
+          <div className="menu_custodian_icon">
+            <img src={process.env.PUBLIC_URL + "/assets/custodian_icon.svg"} />
+          </div>
         </div>
         <div className="menu_items text_menu">
-          <div className="menu_item">Garage</div>
-          <div className="menu_item">Showroom</div>
-          <div className="menu_item">Upcoming</div>
+          <div className="menu_item">
+            <div className="menu_icon">
+              <img src={process.env.PUBLIC_URL + "/assets/home_icon.svg"} />
+            </div>
+            <div className="menu_name">Garage</div>
+          </div>
+          <div className="menu_item">
+            <div className="menu_icon">
+              <img src={process.env.PUBLIC_URL + "/assets/showroom_icon.svg"} />
+            </div>
+            <div className="menu_name">Showroom</div>
+          </div>
+
+          <div className="menu_item">
+            <div className="menu_icon">
+              <img src={process.env.PUBLIC_URL + "/assets/upcoming_icon.svg"} />{" "}
+            </div>
+            <div className="menu_name">Upcoming</div>
+          </div>
         </div>
       </div>
       <div className="cards">
@@ -112,7 +126,9 @@ function Showroom() {
               <img src={car.img} />
             </div>
             <div className="card_header">
-              <p className="card_title text_medium text_primary">{car.title} </p>
+              <p className="card_title text_medium text_primary">
+                {car.title}{" "}
+              </p>
               <p className="card_price text_medium text_secondary">
                 {car.price}
               </p>
