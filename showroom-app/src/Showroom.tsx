@@ -1,6 +1,7 @@
 import React from "react";
 import Menu from "./Menu";
 import "./Showroom.css";
+import Card from "./Card";
 
 let cars = [
   {
@@ -92,34 +93,7 @@ function Showroom() {
       <Menu/>
       <div className="cards">
         {cars.map((car, index) => (
-          <div className="card">
-            <div className="card_image-container">
-              <img src={car.img} />
-            </div>
-            <div className="card_header">
-              <p className="card_title text_medium text_primary">
-                {car.title}
-              </p>
-              <p className="card_price text_medium text_secondary">
-                {car.price}
-              </p>
-            </div>
-            <div className="card_info">
-              <p className="card_description text_small text_secondary">
-                {car.description}
-              </p>
-            </div>
-            <div className="card_footer">
-              <img
-                className="card_location_icon"
-                src={process.env.PUBLIC_URL + "/assets/location_icon.svg"}
-              />
-              <p className="text_small text_secondary">{car.location}</p>
-              <p className="card_distance text_small text_secondary">
-                {car.distance}
-              </p>
-            </div>
-          </div>
+          <Card car={car}/>
         ))}
       </div>
     </div>
