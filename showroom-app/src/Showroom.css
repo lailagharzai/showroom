@@ -14,46 +14,8 @@ body {
   grid-gap: 40px;
 }
 
-.menu {
-  width: 248px;
-  background: #FAFAFA;
-  border-right: 1px solid #E5E5E5;
-  padding: 14px;
-}
-
-.menu_navigation {
-  display: flex;
-  height: 64px;
-  margin-bottom: 24px; 
-  align-items: center;
-}
-
-.menu_icon img {
-  width: 24px;
-  height: 24px;
-}
-
-.menu_icon {
-  flex: 20;
-  display: flex;
-  justify-content: center;
-}
-
-.menu_custodian_icon { 
-  flex: 80;
-  display: flex;
-  justify-content: left;
-}
-
-.menu_name {
-  flex: 80;
-  display: flex;
-  justify-content: left;
-}
-
-.menu_item {
-  height: 64px;
-  display: flex;
+.blue {
+  color:blue;
 }
 
 .text_medium {

@@ -1,0 +1,15 @@
+.menu_icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.menu_icon {
+  flex: 20;
+  display: flex;
+  justify-content: center;
+}
+
+.menu_item {
+  height: 64px;
+  display: flex;
+}

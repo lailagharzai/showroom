@@ -1,4 +1,5 @@
 import React from "react";
+import Menu from "./Menu";
 import "./Showroom.css";
 
 let cars = [
@@ -88,37 +89,7 @@ let cars = [
 function Showroom() {
   return (
     <div className="main">
-      <div className="menu">
-        <div className="menu_navigation">
-          <div className="menu_icon">
-            <img src={process.env.PUBLIC_URL + "/assets/menu_icon.svg"} />
-          </div>
-          <div className="menu_custodian_icon">
-            <img src={process.env.PUBLIC_URL + "/assets/custodian_icon.svg"} />
-          </div>
-        </div>
-        <div className="menu_items text_menu">
-          <div className="menu_item">
-            <div className="menu_icon">
-              <img src={process.env.PUBLIC_URL + "/assets/home_icon.svg"} />
-            </div>
-            <div className="menu_name">Garage</div>
-          </div>
-          <div className="menu_item">
-            <div className="menu_icon">
-              <img src={process.env.PUBLIC_URL + "/assets/showroom_icon.svg"} />
-            </div>
-            <div className="menu_name">Showroom</div>
-          </div>
-
-          <div className="menu_item">
-            <div className="menu_icon">
-              <img src={process.env.PUBLIC_URL + "/assets/upcoming_icon.svg"} />{" "}
-            </div>
-            <div className="menu_name">Upcoming</div>
-          </div>
-        </div>
-      </div>
+      <Menu />
       <div className="cards">
         {cars.map((car, index) => (
           <div className="card">
