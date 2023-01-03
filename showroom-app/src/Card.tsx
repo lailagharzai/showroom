@@ -1,18 +1,37 @@
 import React from "react";
-import "./Card.css";
+// import "./Card.css";
 import styled from "styled-components";
+import {
+  TextMedium,
+  TextPrimary,
+  TextSecondary,
+  TextSmall,
+} from "./TextStyles";
 
 function Card(props: any) {
-  const TextMedium = `
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 400;
+  const CardContainer = styled.div`
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
   `;
 
-  const TextPrimary = `
-    color: black;
+  const CardImageContainer = styled.div`
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
   `;
+
+  const CardImage = styled.img`
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  `
 
   const CardTitle = styled.p`
     margin-bottom: 8px;
@@ -20,33 +39,63 @@ function Card(props: any) {
     ${TextPrimary}
   `;
 
+  const CardHeader = styled.div`
+    padding-top: 24px;
+  `;
+
+  const CardPrice = styled.p`
+    ${TextMedium}
+    ${TextSecondary}
+  `;
+  const CardInfo = styled.div`
+    margin-top: 16px;
+  `;
+  const CardDescription = styled.p`
+    ${TextSmall}
+    ${TextSecondary}
+  `;
+  const CardFooter = styled.div`
+    margin-top: 16px;
+    display: flex;
+    align-self: end;
+    align-items: center;
+    width: 100%;
+  `;
+
+  const CardLocationIcon = styled.div`
+    margin-right: 4px;
+  `;
+
+  const CardLocation = styled.p`
+  ${TextSmall}
+  ${TextSecondary}
+  `
+  const CardDistance = styled.p`
+  ${TextSmall}
+  ${TextSecondary}
+  `
+
+
   return (
-    <div className="card">
-      <div className="card_image-container">
-        <img src={props.car.img} />
-      </div>
-      <div className="card_header">
+    <CardContainer>
+      <CardImageContainer>
+        <CardImage src={props.car.img} />
+      </CardImageContainer>
+      <CardHeader>
         <CardTitle>{props.car.title}</CardTitle>
-        <p className="card_price text_medium text_secondary">
-          {props.car.price}
-        </p>
-      </div>
-      <div className="card_info">
-        <p className="card_description text_small text_secondary">
-          {props.car.description}
-        </p>
-      </div>
-      <div className="card_footer">
-        <img
-          className="card_location_icon"
-          src={process.env.PUBLIC_URL + "/assets/location_icon.svg"}
-        />
-        <p className="text_small text_secondary">{props.car.location}</p>
-        <p className="card_distance text_small text_secondary">
-          {props.car.distance}
-        </p>
-      </div>
-    </div>
+        <CardPrice>{props.car.price}</CardPrice>
+      </CardHeader>
+      <CardInfo>
+        <CardDescription>{props.car.description}</CardDescription>
+      </CardInfo>
+      <CardFooter>
+        <CardLocationIcon>
+          <img src={process.env.PUBLIC_URL + "/assets/location_icon.svg"} />
+        </CardLocationIcon>
+        <CardLocation>{props.car.location}</CardLocation>
+        <CardDistance>{props.car.distance}</CardDistance>
+      </CardFooter>
+    </CardContainer>
   );
 }
 
