@@ -5,14 +5,27 @@ const TextMenu = `
   line-height: 20px;
   font-weight: 400;
 `
-
-
 const TextMedium = `
- .... add here
+font-family: 'Lato', sans-serif;
+font-size: 18px;
+line-height: 20px;
+font-weight: 400;
+`;
+
+const TextPrimary = `
+color: black;
+`;
+
+const TextSecondary = `
+color: #666666;
 `
-export {TextMenu, TextMedium};
 
+const TextSmall = `
+font-family: 'Lato', sans-serif;
+font-size: 14px;
+line-height: 20px;
+font-weight: 400;
+`
 
-// and now you can impirt it in other files with 
+export {TextMenu, TextMedium, TextPrimary, TextSecondary, TextSmall};
 
-// import {TextMedium} from "./TextStyles"
