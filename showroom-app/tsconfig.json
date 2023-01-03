@@ -18,9 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // ignores types from imported libraries https://github.com/styled-components/styled-components/issues/2099#issuecomment-621045711
+    "noImplicitAny": false
   },
   "include": [
     "src"
-  ]
+  ],
 }
