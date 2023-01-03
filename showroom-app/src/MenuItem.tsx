@@ -1,5 +1,4 @@
 import React from "react";
-import "./MenuItem.css";
 import styled from "styled-components";
 
 function MenuItem(props: any) {
