@@ -89,7 +89,7 @@ let cars = [
 function Showroom() {
   return (
     <div className="main">
-      <Menu />
+      <Menu/>
       <div className="cards">
         {cars.map((car, index) => (
           <div className="card">
@@ -98,7 +98,7 @@ function Showroom() {
             </div>
             <div className="card_header">
               <p className="card_title text_medium text_primary">
-                {car.title}{" "}
+                {car.title}
               </p>
               <p className="card_price text_medium text_secondary">
                 {car.price}
