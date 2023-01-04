@@ -16,6 +16,24 @@ function Card(props: any) {
     background-color: white;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+
+    @media only screen and (max-width: 1000px) {
+      {
+        grid-column-end: span 6;
+      }
+    }    
+
+    @media only screen and (max-width: 700px) {
+      {
+        grid-column-end: span 12;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      {
+        grid-column-end: span 6;
+      }
+    }
   `;
 
   const CardImageContainer = styled.div`
@@ -23,15 +41,15 @@ function Card(props: any) {
     padding-top: 56.25%;
     overflow: hidden;
     position: relative;
-  `;
 
-  const CardImage = styled.img`
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  `
+    img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  `;
 
   const CardTitle = styled.p`
     margin-bottom: 8px;
@@ -73,13 +91,14 @@ function Card(props: any) {
   const CardDistance = styled.p`
   ${TextSmall}
   ${TextSecondary}
+  margin-left: auto;
   `
 
 
   return (
     <CardContainer>
       <CardImageContainer>
-        <CardImage src={props.car.img} />
+        <img src={props.car.img} />
       </CardImageContainer>
       <CardHeader>
         <CardTitle>{props.car.title}</CardTitle>

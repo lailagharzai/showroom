@@ -1,7 +1,8 @@
 import React from "react";
 import Menu from "./Menu";
-import "./Showroom.css";
+// import "./Showroom.css";
 import Card from "./Card";
+import styled from "styled-components";
 
 let cars = [
   {
@@ -87,16 +88,52 @@ let cars = [
   },
 ];
 
+const Main = styled.div`
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+
+  @media only screen and (max-width: 700px) {
+    {
+      grid-gap: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    {
+      grid-template-columns: 10px repeat(6, 1fr) 10px;
+      grid-gap: 10px;
+    }
+  }
+`;
+
+const Cards = styled.div`
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+  padding: 60px 0;
+
+  @media only screen and (max-width: 500px) {
+     {
+      grid-column: 2 / span 6;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  
+`;
+
 function Showroom() {
   return (
-    <div className="main">
-      <Menu/>
-      <div className="cards">
+    <Main>
+      <Menu />
+      <Cards>
         {cars.map((car, index) => (
-          <Card car={car}/>
+          <Card car={car} />
         ))}
-      </div>
-    </div>
+      </Cards>
+    </Main>
   );
 }
 

@@ -21,6 +21,11 @@ const MenuIcon = styled.div`
   flex: 20;
   display: flex;
   justify-content: center;
+
+  img {
+    width: 24px;
+    height: 24px; 
+  }
 `;
 
 const MenuCustodianIcon = styled.div`
