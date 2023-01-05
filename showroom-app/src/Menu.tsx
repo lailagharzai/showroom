@@ -33,6 +33,7 @@ const MenuIcon = styled.div`
   flex: 20;
   display: flex;
   justify-content: center;
+  margin-right: 8px;
 
   img {
     width: 24px;
