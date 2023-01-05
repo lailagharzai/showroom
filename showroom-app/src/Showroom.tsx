@@ -94,15 +94,16 @@ const Main = styled.div`
   grid-gap: 40px;
 
   @media only screen and (max-width: 700px) {
-    {
+     {
       grid-gap: 20px;
     }
   }
 
   @media only screen and (max-width: 500px) {
-    {
+     {
       grid-template-columns: 10px repeat(6, 1fr) 10px;
-      grid-gap: 10px;
+      grid-gap: 20px;
+      min-width: calc(100% - 50px);
     }
   }
 `;
@@ -113,15 +114,16 @@ const Cards = styled.div`
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;
   padding: 60px 0;
+  margin-left: 50px;
 
   @media only screen and (max-width: 500px) {
      {
       grid-column: 2 / span 6;
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 20px;
+      margin-left: 50px;
     }
   }
-  
 `;
 
 function Showroom() {

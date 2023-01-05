@@ -11,12 +11,34 @@ function MenuItem(props: any) {
       width: 24px;
       height: 24px;
     }
+
+    @media screen and (max-width: 1000px) {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  
+    @media screen and (max-width: 500px) {
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
   `;
 
   const MenuName = styled.div`
     flex: 80;
     display: flex;
     justify-content: left;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
   `;
 
   const MenuItemContainer = styled.div`

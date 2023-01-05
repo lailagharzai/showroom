@@ -8,6 +8,18 @@ const MenuContainer = styled.div`
   background: #fafafa;
   border-right: 1px solid #e5e5e5;
   padding: 14px;
+
+  @media screen and (max-width: 1000px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 50px;
+  }
 `;
 
 const MenuNavigation = styled.div`
@@ -32,6 +44,10 @@ const MenuCustodianIcon = styled.div`
   flex: 80;
   display: flex;
   justify-content: left;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const MenuItems = styled.div`

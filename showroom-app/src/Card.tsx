@@ -18,21 +18,28 @@ function Card(props: any) {
     transition: all 0.3s ease 0s;
 
     @media only screen and (max-width: 1000px) {
-      {
+       {
         grid-column-end: span 6;
       }
-    }    
+    }
 
     @media only screen and (max-width: 700px) {
-      {
+       {
         grid-column-end: span 12;
+        width: 100%;
       }
     }
 
     @media only screen and (max-width: 500px) {
-      {
+       {
         grid-column-end: span 6;
+        width:100%;
       }
+    }
+
+    @media only screen and (max-width: 300px) {
+      grid-column-end: span 6;
+      min-width: 300px;
     }
   `;
 
@@ -48,6 +55,12 @@ function Card(props: any) {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+      height: 0;
+      padding-top: calc(56.25% - 50px);
     }
   `;
 
@@ -85,15 +98,14 @@ function Card(props: any) {
   `;
 
   const CardLocation = styled.p`
-  ${TextSmall}
-  ${TextSecondary}
-  `
+    ${TextSmall}
+    ${TextSecondary}
+  `;
   const CardDistance = styled.p`
-  ${TextSmall}
-  ${TextSecondary}
+    ${TextSmall}
+    ${TextSecondary}
   margin-left: auto;
-  `
-
+  `;
 
   return (
     <CardContainer>
