@@ -44,6 +44,11 @@ function MenuItem(props: any) {
   const MenuItemContainer = styled.div`
     height: 64px;
     display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: #e1e1e1;
+    }
   `;
 
   return (
