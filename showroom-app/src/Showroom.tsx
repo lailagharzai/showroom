@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
-// import "./Showroom.css";
+import Title from "./Title";
 import Card from "./Card";
 import styled from "styled-components";
 
@@ -114,15 +114,20 @@ const Cards = styled.div`
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;
   padding: 60px 0;
-  margin-left: 50px;
 
   @media only screen and (max-width: 500px) {
-     {
-      grid-column: 2 / span 6;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 20px;
-      margin-left: 50px;
-    }
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+`;
+
+const Content = styled.div`
+
+  grid-column: 2 / span 12;
+  @media only screen and (max-width: 500px) {
+    grid-column: 2 / span 6;
+    margin-left: 50px;
   }
 `;
 
@@ -130,11 +135,15 @@ function Showroom() {
   return (
     <Main>
       <Menu />
-      <Cards>
-        {cars.map((car, index) => (
-          <Card car={car} />
-        ))}
-      </Cards>
+
+      <Content>
+        <Title />
+        <Cards>
+          {cars.map((car, index) => (
+            <Card car={car} />
+          ))}
+        </Cards>
+      </Content>
     </Main>
   );
 }
