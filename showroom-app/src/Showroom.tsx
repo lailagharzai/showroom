@@ -3,8 +3,9 @@ import Menu from "./Menu";
 import Title from "./Title";
 import Card from "./Card";
 import styled from "styled-components";
+import { ICar } from "./Types.d";
 
-let cars = [
+let cars: Array<ICar> = [
   {
     title: "2022 Porsche Panamera Turbo",
     img: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
@@ -123,7 +124,6 @@ const Cards = styled.div`
 `;
 
 const Content = styled.div`
-
   grid-column: 2 / span 12;
   @media only screen and (max-width: 500px) {
     grid-column: 2 / span 6;
@@ -135,9 +135,8 @@ function Showroom() {
   return (
     <Main>
       <Menu />
-
       <Content>
-        <Title />
+        <Title header="Recent cars for sale" />
         <Cards>
           {cars.map((car, index) => (
             <Card car={car} />

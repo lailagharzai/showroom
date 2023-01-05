@@ -1,7 +1,10 @@
-// interface Car {
+interface ICar {
+  title: string;
+  img: string;
+  price: string;
+  description: string;
+  location: string;
+  distance: string;
+}
 
-// }
-
-// export default {Car}
-
-export default null;
+export type { ICar };

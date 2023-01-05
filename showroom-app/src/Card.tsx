@@ -8,7 +8,13 @@ import {
   TextSmall,
 } from "./TextStyles";
 
-function Card(props: any) {
+import { ICar } from "./Types.d";
+
+interface Props {
+  car: ICar;
+}
+
+function Card(props: Props) {
   const CardContainer = styled.div`
     grid-column-end: span 4;
     display: flex;
@@ -33,7 +39,7 @@ function Card(props: any) {
     @media only screen and (max-width: 500px) {
        {
         grid-column-end: span 6;
-        width:100%;
+        width: 100%;
       }
     }
 

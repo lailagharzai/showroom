@@ -28,7 +28,7 @@ const MenuNavigation = styled.div`
   margin-bottom: 24px;
   align-items: center;
 `;
-// repeat in menuicon ?
+
 const MenuIcon = styled.div`
   flex: 20;
   display: flex;
@@ -55,7 +55,8 @@ const MenuItems = styled.div`
   ${TextMenu}
 `;
 
-function Menu(props: any) {
+
+function Menu() {
   return (
     <MenuContainer>
       <MenuNavigation>

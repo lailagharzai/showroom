@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-function MenuItem(props: any) {
+interface Props {
+  name: string;
+  icon: string;
+}
+
+function MenuItem(props: Props) {
   const MenuIcon = styled.div`
     flex: 20;
     display: flex;
@@ -19,7 +24,7 @@ function MenuItem(props: any) {
         height: 20px;
       }
     }
-  
+
     @media screen and (max-width: 500px) {
       img {
         width: 18px;
