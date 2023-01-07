@@ -23,24 +23,22 @@ function Card(props: Props) {
     cursor: pointer;
     transition: all 0.3s ease 0s;
 
+    @media only screen and (min-width: 2000px) {
+    
+    }
+
     @media only screen and (max-width: 1000px) {
-       {
-        grid-column-end: span 6;
-      }
+      grid-column-end: span 6;
     }
 
     @media only screen and (max-width: 700px) {
-       {
-        grid-column-end: span 12;
-        width: 100%;
-      }
+      grid-column-end: span 12;
+      width: 100%;
     }
 
     @media only screen and (max-width: 500px) {
-       {
-        grid-column-end: span 6;
-        width: 100%;
-      }
+      grid-column-end: span 6;
+      width: 100%;
     }
 
     @media only screen and (max-width: 300px) {

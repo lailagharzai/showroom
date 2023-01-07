@@ -8,6 +8,11 @@ const StyledTitle = styled.div`
   width: 100%;
   padding-bottom: 5px;
   ${TextLarge}
+
+  @media only screen and (max-width: 400px) {
+    display: none;
+  }
+
 `;
 
 interface Props {

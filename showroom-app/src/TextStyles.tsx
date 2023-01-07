@@ -10,7 +10,7 @@ const TextMedium = `
 `;
 
 const TextLarge = `
-  font-size: 28px;
+  font-size: 26px;
   line-height: 20px;
   font-weight: 400;
 `;

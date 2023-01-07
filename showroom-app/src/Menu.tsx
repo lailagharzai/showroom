@@ -8,6 +8,7 @@ const MenuContainer = styled.div`
   background: #fafafa;
   border-right: 1px solid #e5e5e5;
   padding: 14px;
+  height: 100%;
 
   @media screen and (max-width: 1000px) {
     width: 200px;

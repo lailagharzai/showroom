@@ -6,8 +6,7 @@ interface Props {
   icon: string;
 }
 
-function MenuItem(props: Props) {
-  const MenuIcon = styled.div`
+const MenuIcon = styled.div`
     flex: 20;
     display: flex;
     justify-content: center;
@@ -57,6 +56,7 @@ function MenuItem(props: Props) {
     }
   `;
 
+function MenuItem(props: Props) {
   return (
     <MenuItemContainer>
       <MenuIcon>
