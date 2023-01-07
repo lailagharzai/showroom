@@ -9,6 +9,12 @@ const TextMedium = `
   font-weight: 400;
 `;
 
+const TextLarge = `
+  font-size: 28px;
+  line-height: 20px;
+  font-weight: 400;
+`;
+
 const TextPrimary = `
   color: black;
 `;
@@ -23,4 +29,4 @@ const TextSmall = `
   font-weight: 400;
 `;
 
-export { TextMenu, TextMedium, TextPrimary, TextSecondary, TextSmall };
+export { TextMenu, TextMedium, TextPrimary, TextSecondary, TextSmall, TextLarge };

@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  TextLarge
+} from "./TextStyles";
 
 const StyledTitle = styled.div`
   width: 100%;
+  padding-bottom: 5px;
+  ${TextLarge}
 `;
 
 interface Props {

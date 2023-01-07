@@ -92,7 +92,7 @@ let cars: Array<ICar> = [
 const Main = styled.div`
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
-  grid-gap: 40px;
+  grid-gap: 20px;
 
   @media only screen and (max-width: 700px) {
      {
@@ -114,7 +114,7 @@ const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;
-  padding: 60px 0;
+  padding: 32px 0;
 
   @media only screen and (max-width: 500px) {
     grid-column: 2 / span 6;
@@ -125,6 +125,7 @@ const Cards = styled.div`
 
 const Content = styled.div`
   grid-column: 2 / span 12;
+  padding-top: 60px;
   @media only screen and (max-width: 500px) {
     grid-column: 2 / span 6;
     margin-left: 50px;
