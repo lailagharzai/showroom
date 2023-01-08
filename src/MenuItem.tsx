@@ -53,6 +53,7 @@ const MenuIcon = styled.div`
 
     &:hover {
       background-color: #e1e1e1;
+      cursor: pointer;
     }
   `;
 
