@@ -35,7 +35,7 @@ let cars: Array<ICar> = [
   },
   {
     title: "2022 Porsche Panamera Turbo",
-    img: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=904&q=80",
+    img: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
     price: "£1,399,950",
     description:
       "The prominent sculpting of the side profile creates the customary Porsche waistline.",
@@ -71,7 +71,7 @@ let cars: Array<ICar> = [
   },
   {
     title: "2022 Porsche Panamera Turbo",
-    img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    img: "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
     price: "£1,399,950",
     description:
       "The prominent sculpting of the side profile creates the customary Porsche waistline.",
@@ -80,7 +80,7 @@ let cars: Array<ICar> = [
   },
   {
     title: "2022 Porsche Panamera Turbo",
-    img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    img: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80",
     price: "£1,399,950",
     description:
       "The prominent sculpting of the side profile creates the customary Porsche waistline.",
