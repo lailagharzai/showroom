@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Card.css";
 import styled from "styled-components";
 import {
   TextMedium,
