@@ -6,25 +6,9 @@ import styled from "styled-components";
 import { ICar } from "./Types.d";
 import { cars } from "./Data";
 
-
 const Main = styled.div`
   display: grid;
-  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 20px;
-
-  @media only screen and (max-width: 700px) {
-     {
-      grid-gap: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-     {
-      grid-template-columns: 10px repeat(6, 1fr) 10px;
-      grid-gap: 20px;
-      min-width: calc(100% - 50px);
-    }
-  }
 `;
 
 const Cards = styled.div`
