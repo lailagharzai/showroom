@@ -20,6 +20,10 @@ const Cards = styled.div`
 
 const Content = styled.div`
   padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 `;
 
 function Showroom() {
@@ -27,7 +31,7 @@ function Showroom() {
     <Main>
       <Menu />
       <Content>
-        <Title header="Recent cars for sale" />
+        {/* <Title header="Recent cars for sale" /> */}
         <Cards>
           {cars.map((car, index) => (
             <Card car={car} />
