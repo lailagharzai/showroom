@@ -7,8 +7,7 @@ import { ICar } from "./Types.d";
 import { cars } from "./Data";
 
 const Main = styled.div`
-  display: grid;
-  grid-gap: 20px;
+  display: flex;
 `;
 
 const Cards = styled.div`
@@ -26,6 +25,7 @@ const Cards = styled.div`
 `;
 
 const Content = styled.div`
+  padding-left: 20px;
   grid-column: 2 / span 12;
   padding-top: 60px;
 
