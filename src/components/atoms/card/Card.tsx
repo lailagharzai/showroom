@@ -5,9 +5,9 @@ import {
   TextPrimary,
   TextSecondary,
   TextSmall,
-} from "./TextStyles";
+} from "../../../TextStyles";
 
-import { ICar } from "./Types.d";
+import { ICar } from "../../../Types.d";
 
 interface Props {
   car: ICar;

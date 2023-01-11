@@ -1,7 +1,7 @@
 import React from "react";
-import MenuItem from "./MenuItem";
+import MenuItem from "../../atoms/menuitem/MenuItem";
 import styled from "styled-components";
-import { TextMenu } from "./TextStyles";
+import { TextMenu } from "../../../TextStyles";
 
 const MenuContainer = styled.div`
   width: 248px;

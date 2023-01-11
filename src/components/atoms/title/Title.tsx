@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
   TextLarge
-} from "./TextStyles";
+} from "../../../TextStyles";
 
 const StyledTitle = styled.div`
   width: 100%;

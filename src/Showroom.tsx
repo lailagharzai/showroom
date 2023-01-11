@@ -1,7 +1,7 @@
 import React from "react";
-import Menu from "./Menu";
-import Title from "./Title";
-import Card from "./Card";
+import Menu from "./components/molecules/menu/Menu";
+import Title from "./components/atoms/title/Title";
+import Card from "./components/atoms/card/Card";
 import styled from "styled-components";
 import { ICar } from "./Types.d";
 import { cars, menuItems } from "./Data";
