@@ -4,7 +4,7 @@ import Title from "./Title";
 import Card from "./Card";
 import styled from "styled-components";
 import { ICar } from "./Types.d";
-import { cars } from "./Data";
+import { cars, menuItems } from "./Data";
 
 const Main = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ const Content = styled.div`
 function Showroom() {
   return (
     <Main>
-      <Menu/>
+      <Menu menuItems={menuItems}/>
       <Content>
         <Title header="Recent cars for sale" />
         <Cards>

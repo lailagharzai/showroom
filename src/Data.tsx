@@ -1,4 +1,4 @@
-import { ICar } from "./Types.d";
+import { ICar, IMenuItem } from "./Types.d";
 
 let cars: Array<ICar> = [
   {
@@ -165,4 +165,10 @@ let cars: Array<ICar> = [
   },
 ];
 
-export {cars};
+let menuItems: Array<IMenuItem> = [
+  { name: "Garage", icon: "/assets/home_icon.svg" },
+  { name: "Showroom", icon: "/assets/showroom_icon.svg" },
+  { name: "Upcoming", icon: "/assets/upcoming_icon.svg" }
+]
+
+export {cars, menuItems};

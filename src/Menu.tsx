@@ -8,7 +8,7 @@ const MenuContainer = styled.div`
   background: #fafafa;
   border-right: 1px solid #e5e5e5;
   padding: 14px;
-  height: 100%;
+  // height: 100%;
 
   @media screen and (max-width: 1000px) {
     width: 200px;
@@ -24,8 +24,8 @@ const MenuContainer = styled.div`
 `;
 
 const MenuNavigation = styled.div`
-  position: sticky;
-  top: 0px;
+  // position: sticky;
+  // top: 0px;
   display: flex;
   height: 64px;
   margin-bottom: 24px;
@@ -40,7 +40,7 @@ const MenuIcon = styled.div`
 
   img {
     width: 24px;
-    height: 24px; 
+    height: 24px;
   }
 `;
 
@@ -58,8 +58,7 @@ const MenuItems = styled.div`
   ${TextMenu}
 `;
 
-
-function Menu() {
+function Menu({ menuItems }) {
   return (
     <MenuContainer>
       <MenuNavigation>
@@ -71,9 +70,9 @@ function Menu() {
         </MenuCustodianIcon>
       </MenuNavigation>
       <MenuItems>
-        <MenuItem name="Garage" icon="/assets/home_icon.svg" />
-        <MenuItem name="Showroom" icon="/assets/showroom_icon.svg" />
-        <MenuItem name="Upcoming" icon="/assets/upcoming_icon.svg" />
+        {menuItems.map((item: { name: string; icon: string; }) => (
+          <MenuItem name={item.name} icon={item.icon} />
+        ))}
       </MenuItems>
     </MenuContainer>
   );

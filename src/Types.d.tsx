@@ -7,4 +7,9 @@ interface ICar {
   distance: string;
 }
 
-export type { ICar };
+interface IMenuItem {
+  name: string;
+  icon: string;
+}
+
+export type { ICar, IMenuItem };
