@@ -24,6 +24,8 @@ const MenuContainer = styled.div`
 `;
 
 const MenuNavigation = styled.div`
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 64px;
   margin-bottom: 24px;

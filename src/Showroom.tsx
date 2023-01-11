@@ -31,7 +31,7 @@ const Content = styled.div`
 function Showroom() {
   return (
     <Main>
-      <Menu />
+      <Menu/>
       <Content>
         <Title header="Recent cars for sale" />
         <Cards>
