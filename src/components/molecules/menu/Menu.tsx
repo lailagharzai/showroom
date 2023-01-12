@@ -1,5 +1,5 @@
 import React from "react";
-import MenuItem from "../../atoms/menuitem/MenuItem";
+import MenuItem from "../menuitem/MenuItem";
 import styled from "styled-components";
 import { TextMenu } from "../../../TextStyles";
 

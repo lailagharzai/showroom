@@ -27,3 +27,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The app will automatically reload if you make any changes to the code.
 
+Structure
+
+Atoms 
+    - Icons + Logo 
+    - Text
+Molecules
+    - Card
+    - Menuitem
+    - Menu
+Organism
+    - Showroom (of cards)
+Template 
+    - Menu and Content

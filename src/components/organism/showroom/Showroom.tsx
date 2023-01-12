@@ -1,11 +1,11 @@
 import React from "react";
 import Menu from "../../molecules/menu/Menu";
-import Title from "../../atoms/title/Title";
 import Card from "../../molecules/card/Card";
 import styled from "styled-components";
 import { ICar } from "../../../Types.d";
-import { cars, menuItems } from "../../../Data";
-import Text from "../../atoms/text/Text"
+import { cars } from "../../../Data";
+import Text from "../../atoms/text/Text";
+import Icon from "../../atoms/icons/Icon";
 
 const Main = styled.div`
   display: flex;
@@ -32,15 +32,16 @@ const Content = styled.div`
 function Showroom() {
   return (
     <Main>
-      <Menu menuItems={menuItems}/>
-      <Content>
-      <Text primary = {true} size = {"large"} text = {"Recent Cars for Sale"}/>
+      {/* <Icon type={"Menu"}/> */}
+      {/* <Menu menuItems={menuItems} /> */}
+      {/* <Content>
+        <Text primary={true} size={"large"} text={"Recent Cars for Sale"} />
         <Cards>
           {cars.map((car, index) => (
             <Card car={car} />
           ))}
         </Cards>
-      </Content>
+      </Content> */}
     </Main>
   );
 }

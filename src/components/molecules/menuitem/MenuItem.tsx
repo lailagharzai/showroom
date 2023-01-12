@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Icon from "../../atoms/icons/Icon";
 
 interface Props {
   name: string;
@@ -60,9 +61,9 @@ const MenuItemContainer = styled.div`
 function MenuItem(props: Props) {
   return (
     <MenuItemContainer>
-      <MenuIcon>
-        <img src={process.env.PUBLIC_URL + props.icon} />
-      </MenuIcon>
+      <Icon type="Menu"/>
+        {/* <img src={process.env.PUBLIC_URL + props.icon} /> */}
+      {/* </MenuIcon> */}
       <MenuName>{props.name}</MenuName>
     </MenuItemContainer>
   );

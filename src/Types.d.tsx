@@ -7,9 +7,16 @@ interface ICar {
   distance: string;
 }
 
-interface IMenuItem {
-  name: string;
+type IconType =
+  | "Garage"
+  | "Location"
+  | "Menu"
+  | "Showroom"
+  | "Upcoming";
+
+interface IIcons {
+  name: IconType;
   icon: string;
 }
 
-export type { ICar, IMenuItem };
+export type { ICar, IIcons, IconType };
