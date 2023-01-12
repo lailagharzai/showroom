@@ -1,20 +1,3 @@
-const TextMenu = `
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-`;
-const TextMedium = `
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 400;
-`;
-
-const TextLarge = `
-  font-size: 26px;
-  line-height: 20px;
-  font-weight: 400;
-`;
-
 const TextPrimary = `
   color: black;
 `;
@@ -25,6 +8,24 @@ const TextSecondary = `
 
 const TextSmall = `
   font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+`;
+
+const TextMenu = `
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+`;
+
+const TextMedium = `
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+`;
+
+const TextLarge = `
+  font-size: 26px;
   line-height: 20px;
   font-weight: 400;
 `;

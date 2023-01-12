@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Showroom from './Showroom';
+import Showroom from './components/organism/showroom/Showroom';
 
 
 const root = ReactDOM.createRoot(

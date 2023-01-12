@@ -1,10 +1,11 @@
 import React from "react";
-import Menu from "./components/molecules/menu/Menu";
-import Title from "./components/atoms/title/Title";
-import Card from "./components/atoms/card/Card";
+import Menu from "../../molecules/menu/Menu";
+import Title from "../../atoms/title/Title";
+import Card from "../../molecules/card/Card";
 import styled from "styled-components";
-import { ICar } from "./Types.d";
-import { cars, menuItems } from "./Data";
+import { ICar } from "../../../Types.d";
+import { cars, menuItems } from "../../../Data";
+import Text from "../../atoms/text/Text"
 
 const Main = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ function Showroom() {
     <Main>
       <Menu menuItems={menuItems}/>
       <Content>
-        <Title header="Recent cars for sale" />
+      <Text primary = {true} size = {"large"} text = {"Recent Cars for Sale"}/>
         <Cards>
           {cars.map((car, index) => (
             <Card car={car} />
