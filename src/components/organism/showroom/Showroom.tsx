@@ -6,6 +6,7 @@ import { ICar } from "../../../Types.d";
 import { cars } from "../../../Data";
 import Text from "../../atoms/text/Text";
 import Icon from "../../atoms/icons/Icon";
+import MenuItem from "../../molecules/menuitem/MenuItem";
 
 const Main = styled.div`
   display: flex;
@@ -32,6 +33,7 @@ const Content = styled.div`
 function Showroom() {
   return (
     <Main>
+      <MenuItem type="Menu" text="Garage"/>
       {/* <Icon type={"Menu"}/> */}
       {/* <Menu menuItems={menuItems} /> */}
       {/* <Content>

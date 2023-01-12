@@ -70,9 +70,9 @@ function Menu({ menuItems }) {
         </MenuCustodianIcon>
       </MenuNavigation>
       <MenuItems>
-        {menuItems.map((item: { name: string; icon: string; }) => (
-          <MenuItem name={item.name} icon={item.icon} />
-        ))}
+        {/* {menuItems.map((item: { name: string; icon: string; }) => (
+          <MenuItem/>
+        ))} */}
       </MenuItems>
     </MenuContainer>
   );

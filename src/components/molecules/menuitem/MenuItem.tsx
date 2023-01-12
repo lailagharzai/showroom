@@ -1,36 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { TextMenu } from "../../../TextStyles";
+import { IconType } from "../../../Types.d";
 import Icon from "../../atoms/icons/Icon";
+import Text from "../../atoms/text/Text";
 
 interface Props {
-  name: string;
-  icon: string;
+  type: IconType;
+  text: string;
 }
 
-const MenuIcon = styled.div`
+const IconContainer = styled.div`
   flex: 20;
   display: flex;
   justify-content: center;
   margin-right: 8px;
-
-  img {
-    width: 24px;
-    height: 24px;
-  }
-
-  @media screen and (max-width: 1000px) {
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    img {
-      width: 18px;
-      height: 18px;
-    }
-  }
 `;
 
 const MenuName = styled.div`
@@ -61,10 +45,10 @@ const MenuItemContainer = styled.div`
 function MenuItem(props: Props) {
   return (
     <MenuItemContainer>
-      <Icon type="Menu"/>
-        {/* <img src={process.env.PUBLIC_URL + props.icon} /> */}
-      {/* </MenuIcon> */}
-      <MenuName>{props.name}</MenuName>
+    <IconContainer>
+      <Icon type={props.type} />
+      </IconContainer>
+      <Text primary={true} size={"TextMenu"} text={props.text} />
     </MenuItemContainer>
   );
 }
