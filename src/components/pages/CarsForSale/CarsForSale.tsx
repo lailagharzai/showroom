@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Icon from "../atoms/icons/Icon";
-import Text from "../atoms/text/Text";
-import MenuItem from "../molecules/menuitem/MenuItem";
-import {cars} from "../../Data";
-import Card from "../molecules/card/Card";
-import Menu from "../molecules/menu/Menu";
-import Showroom from "../organism/showroom/Showroom";
+import Icon from "../../atoms/icons/Icon";
+import Text from "../../atoms/text/Text";
+import MenuItem from "../../molecules/menuitem/MenuItem";
+import {cars} from "../../../Data";
+import Card from "../../molecules/card/Card";
+import Menu from "../../molecules/menu/Menu";
+import Showroom from "../../organism/showroom/Showroom";
 
 const Main = styled.div`
   display: flex;
@@ -30,13 +30,13 @@ const Content = styled.div`
   justify-content: center;
 `;
 
-function CarsForSale() {
+const StyledTitle = styled(Text)`
+@media screen and (max-width: 700px) {
+  display: none;
+}
+`;
 
-  const StyledTitle = styled(Text)`
-    @media screen and (max-width: 700px) {
-      display: none;
-    }
-  `;
+function CarsForSale() {
 
   return (
     <Main>
