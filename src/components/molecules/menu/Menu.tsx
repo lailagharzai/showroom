@@ -1,7 +1,7 @@
 import React from "react";
-import MenuItem from "../menuitem/MenuItem";
 import styled from "styled-components";
-import { TextMenu } from "../../../TextStyles";
+import Icon from "../../atoms/icons/Icon";
+import Logo from "../../atoms/icons/Logo";
 
 const MenuContainer = styled.div`
   width: 248px;
@@ -23,7 +23,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-const MenuNavigation = styled.div`
+const PositionedMenu = styled.div`
   // position: sticky;
   // top: 0px;
   display: flex;
@@ -32,19 +32,14 @@ const MenuNavigation = styled.div`
   align-items: center;
 `;
 
-const MenuIcon = styled.div`
+const PositionedMenuIcon = styled.div`
   flex: 20;
   display: flex;
   justify-content: center;
   margin-right: 8px;
-
-  img {
-    width: 24px;
-    height: 24px;
-  }
 `;
 
-const MenuCustodianIcon = styled.div`
+const PositionedLogo = styled.div`
   flex: 80;
   display: flex;
   justify-content: left;
@@ -54,26 +49,22 @@ const MenuCustodianIcon = styled.div`
   }
 `;
 
-const MenuItems = styled.div`
-  ${TextMenu}
-`;
+interface Props {
+  children?: React.ReactNode;
+}
 
-function Menu({ menuItems }) {
+function Menu(props: Props) {
   return (
     <MenuContainer>
-      <MenuNavigation>
-        <MenuIcon>
-          <img src={process.env.PUBLIC_URL + "/assets/menu_icon.svg"} />
-        </MenuIcon>
-        <MenuCustodianIcon>
-          <img src={process.env.PUBLIC_URL + "/assets/custodian_icon.svg"} />
-        </MenuCustodianIcon>
-      </MenuNavigation>
-      <MenuItems>
-        {/* {menuItems.map((item: { name: string; icon: string; }) => (
-          <MenuItem/>
-        ))} */}
-      </MenuItems>
+      <PositionedMenu>
+        <PositionedMenuIcon>
+          <Icon type={"Menu"} />
+        </PositionedMenuIcon>
+        <PositionedLogo>
+          <Logo />
+        </PositionedLogo>
+      </PositionedMenu>
+      {props.children}
     </MenuContainer>
   );
 }

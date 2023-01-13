@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { TextMenu } from "../../../TextStyles";
 import { IconType } from "../../../Types.d";
 import Icon from "../../atoms/icons/Icon";
 import Text from "../../atoms/text/Text";
@@ -10,14 +9,14 @@ interface Props {
   text: string;
 }
 
-const IconContainer = styled.div`
+const PositionedIcon = styled(Icon)`
   flex: 20;
   display: flex;
   justify-content: center;
   margin-right: 8px;
 `;
 
-const MenuName = styled.div`
+const PositionedText = styled(Text)`
   flex: 80;
   display: flex;
   justify-content: left;
@@ -45,10 +44,8 @@ const MenuItemContainer = styled.div`
 function MenuItem(props: Props) {
   return (
     <MenuItemContainer>
-    <IconContainer>
-      <Icon type={props.type} />
-      </IconContainer>
-      <Text primary={true} size={"TextMenu"} text={props.text} />
+      <PositionedIcon type={props.type} />
+      <PositionedText primary={true} size={"TextMenu"} text={props.text} />
     </MenuItemContainer>
   );
 }
