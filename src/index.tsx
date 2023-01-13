@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CarsForSale from './components/pages/CarsForSale';
+import CarsForSale from './components/pages/CarsForSale/CarsForSale';
 
 
 const root = ReactDOM.createRoot(
