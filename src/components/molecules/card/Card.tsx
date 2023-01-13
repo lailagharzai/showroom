@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  TextMedium,
-  TextPrimary,
-  TextSecondary,
-  TextSmall,
-} from "../../../TextStyles";
-
+import Text from "../../atoms/text/Text";
 import { ICar } from "../../../Types.d";
+import Icon from "../../atoms/icons/Icon";
 
 interface Props {
   car: ICar;
@@ -42,27 +37,18 @@ function Card(props: Props) {
     }
   `;
 
-  const CardTitle = styled.p`
+  const PositionedTitleText = styled(Text)`
     margin-bottom: 8px;
-    ${TextMedium}
-    ${TextPrimary}
   `;
 
-  const CardHeader = styled.div`
+  const PositionedHeader = styled.div`
     padding-top: 24px;
   `;
 
-  const CardPrice = styled.p`
-    ${TextMedium}
-    ${TextSecondary}
-  `;
-  const CardInfo = styled.div`
+  const PositionedDescriptionText = styled.div`
     margin-top: 16px;
   `;
-  const CardDescription = styled.p`
-    ${TextSmall}
-    ${TextSecondary}
-  `;
+
   const CardFooter = styled.div`
     margin-top: 16px;
     display: flex;
@@ -71,18 +57,11 @@ function Card(props: Props) {
     width: 100%;
   `;
 
-  const CardLocationIcon = styled.div`
+  const PositionedLocationIcon = styled.div`
     margin-right: 4px;
   `;
-
-  const CardLocation = styled.p`
-    ${TextSmall}
-    ${TextSecondary}
-  `;
-  const CardDistance = styled.p`
-    ${TextSmall}
-    ${TextSecondary}
-  margin-left: auto;
+  const PositionedDistanceText = styled(Text)`
+    margin-left: auto;
   `;
 
   return (
@@ -90,19 +69,19 @@ function Card(props: Props) {
       <CardImageContainer>
         <img src={props.car.img} />
       </CardImageContainer>
-      <CardHeader>
-        <CardTitle>{props.car.title}</CardTitle>
-        <CardPrice>{props.car.price}</CardPrice>
-      </CardHeader>
-      <CardInfo>
-        <CardDescription>{props.car.description}</CardDescription>
-      </CardInfo>
+      <PositionedHeader>
+        <PositionedTitleText primary={true} size={"medium"} text={props.car.title}/>
+        <Text primary={false} size={"medium"} text={props.car.price} />
+      </PositionedHeader>
+      <PositionedDescriptionText>
+        <Text primary={false} size={"small"} text={props.car.description} />
+      </PositionedDescriptionText>
       <CardFooter>
-        <CardLocationIcon>
-          <img src={process.env.PUBLIC_URL + "/assets/location_icon.svg"} />
-        </CardLocationIcon>
-        <CardLocation>{props.car.location}</CardLocation>
-        <CardDistance>{props.car.distance}</CardDistance>
+        <PositionedLocationIcon>
+          <Icon small={true} type={"Location"} />
+        </PositionedLocationIcon>
+        <Text primary={false} size={"small"} text={props.car.location} />
+        <PositionedDistanceText primary={false} size={"small"} text={props.car.distance}/>
       </CardFooter>
     </CardContainer>
   );
