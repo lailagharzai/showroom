@@ -41,7 +41,7 @@ function MenuItem(props: Props) {
   return (
     <MenuItemContainer>
       <PositionedIcon type={props.type} />
-      <PositionedText primary={true} size={"TextMenu"} text={props.text} />
+      <PositionedText primary={true} size={"MenuText"} text={props.text} />
     </MenuItemContainer>
   );
 }
