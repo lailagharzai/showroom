@@ -21,10 +21,6 @@ const PositionedText = styled(Text)`
   display: flex;
   justify-content: left;
 
-  @media screen and (max-width: 1000px) {
-    font-size: 16px;
-  }
-
   @media screen and (max-width: 700px) {
     display: none;
   }
