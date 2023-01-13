@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Showroom from './components/organism/showroom/Showroom';
+import CarsForSale from './components/pages/CarsForSale';
 
 
 const root = ReactDOM.createRoot(
@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Showroom />
+    <CarsForSale/>
   </React.StrictMode>
 );
