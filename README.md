@@ -1,6 +1,6 @@
 # Showroom
 
-This project is a reproduction of a showroom UI for cars, built with TypeScript, React, and styled-components.
+This project is a reproduction of a showroom UI for cars, built with TypeScript, React, and styled-components, with a focus on implementing Atomic Design for the structuring of components.
 
 ## Installation
 
