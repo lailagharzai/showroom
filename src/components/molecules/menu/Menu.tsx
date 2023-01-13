@@ -8,7 +8,6 @@ const MenuContainer = styled.div`
   background: #fafafa;
   border-right: 1px solid #e5e5e5;
   padding: 14px;
-  // height: 100%;
 
   @media screen and (max-width: 1000px) {
     width: 200px;
@@ -23,9 +22,12 @@ const MenuContainer = styled.div`
   }
 `;
 
+const StickyContainer = styled.div`
+  position: sticky;
+  top: 0;
+`;
+
 const PositionedMenu = styled.div`
-  // position: sticky;
-  // top: 0px;
   display: flex;
   height: 64px;
   margin-bottom: 24px;
@@ -56,15 +58,17 @@ interface Props {
 function Menu(props: Props) {
   return (
     <MenuContainer>
-      <PositionedMenu>
-        <PositionedMenuIcon>
-          <Icon type={"Menu"} />
-        </PositionedMenuIcon>
-        <PositionedLogo>
-          <Logo />
-        </PositionedLogo>
-      </PositionedMenu>
-      {props.children}
+      <StickyContainer>
+        <PositionedMenu>
+          <PositionedMenuIcon>
+            <Icon type={"Menu"} />
+          </PositionedMenuIcon>
+          <PositionedLogo>
+            <Logo />
+          </PositionedLogo>
+        </PositionedMenu>
+        {props.children}
+      </StickyContainer>
     </MenuContainer>
   );
 }
