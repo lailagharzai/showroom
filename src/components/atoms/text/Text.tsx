@@ -34,40 +34,42 @@ const TextLarge = `
 `;
 
 interface Props {
+  className?: string;
   primary: boolean;
   size: string;
   text: string;
 }
 
 function Text(props: Props) {
-    let color = props.primary ? TextPrimary : TextSecondary
+  let color = props.primary ? TextPrimary : TextSecondary
 
-    let size = TextSmall; 
-    switch (props.size) {
-        case "small":
-        size = TextSmall;
-        break;
-        case "menu":
-        size = TextMenu;
-        break;
-        case "medium":
-        size = TextMedium;
-        break;
-        case "large":
-        size = TextLarge;
-        break;
-        default:
-        break;
-    }
+  let size = TextSmall;
+  switch (props.size) {
+    case "small":
+      size = TextSmall;
+      break;
+    case "menu":
+      size = TextMenu;
+      break;
+    case "medium":
+      size = TextMedium;
+      break;
+    case "large":
+      size = TextLarge;
+      break;
+    default:
+      break;
+  }
 
-    const StyledText = styled.div`
+  const StyledText = styled.div`
     ${color}
     ${size}
     `
   return (
-      <StyledText>{props.text}</StyledText>
+    <StyledText className={props.className}>{props.text}</StyledText>
   );
 }
 
 export default Text;
+
 
