@@ -7,16 +7,13 @@ interface ICar {
   distance: string;
 }
 
-type IconType =
-  | "Garage"
-  | "Location"
-  | "Menu"
-  | "Showroom"
-  | "Upcoming";
+type IconType = "Garage" | "Location" | "Menu" | "Showroom" | "Upcoming";
+
+type TextSize = "SmallText" | "MediumText" | "LargeText" | "MenuText";
 
 interface IIcons {
   name: IconType;
   icon: string;
 }
 
-export type { ICar, IIcons, IconType };
+export type { ICar, IIcons, IconType, TextSize };
