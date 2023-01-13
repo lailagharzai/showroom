@@ -46,7 +46,7 @@ function CarsForSale() {
         <MenuItem type={"Upcoming"} text={"Upcoming"}/>
       </Menu>
       <Content>
-        <StyledTitle primary={true} size={"large"} text={"Recent Cars for Sale"}/>
+        <StyledTitle primary={true} size={"LargeText"} text={"Recent Cars for Sale"}/>
         <Showroom items={cars}/>
       </Content>
     </Main>
