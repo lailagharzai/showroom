@@ -70,18 +70,18 @@ function Card(props: Props) {
         <img src={props.car.img} />
       </CardImageContainer>
       <PositionedHeader>
-        <PositionedTitleText primary={true} size={"medium"} text={props.car.title}/>
-        <Text primary={false} size={"medium"} text={props.car.price} />
+        <PositionedTitleText primary={true} size={"MediumText"} text={props.car.title}/>
+        <Text primary={false} size={"MediumText"} text={props.car.price} />
       </PositionedHeader>
       <PositionedDescriptionText>
-        <Text primary={false} size={"small"} text={props.car.description} />
+        <Text primary={false} size={"SmallText"} text={props.car.description} />
       </PositionedDescriptionText>
       <CardFooter>
         <PositionedLocationIcon>
           <Icon small={true} type={"Location"} />
         </PositionedLocationIcon>
-        <Text primary={false} size={"small"} text={props.car.location} />
-        <PositionedDistanceText primary={false} size={"small"} text={props.car.distance}/>
+        <Text primary={false} size={"SmallText"} text={props.car.location} />
+        <PositionedDistanceText primary={false} size={"SmallText"} text={props.car.distance}/>
       </CardFooter>
     </CardContainer>
   );
