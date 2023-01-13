@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { TextSize } from "../../../Types";
 
 const TextPrimary = `
   color: black;
@@ -36,7 +37,7 @@ const TextLarge = `
 interface Props {
   className?: string;
   primary: boolean;
-  size: string;
+  size: TextSize;
   text: string;
 }
 
@@ -45,16 +46,16 @@ function Text(props: Props) {
 
   let size = TextSmall;
   switch (props.size) {
-    case "small":
+    case "SmallText":
       size = TextSmall;
       break;
-    case "menu":
+    case "MenuText":
       size = TextMenu;
       break;
-    case "medium":
+    case "MediumText":
       size = TextMedium;
       break;
-    case "large":
+    case "LargeText":
       size = TextLarge;
       break;
     default:
